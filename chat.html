@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Diagnóstico | IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+        <div class="nav-actions">
+            <a href="index.html" class="link-login">Terminar chat</a>
+        </div>
+    </nav>
+
+    <main class="chat-container">
+        <div class="chat-header">
+            <div class="chat-header-dot"></div>
+            <div class="chat-header-text">
+                <h2>Asistente de diagnóstico</h2>
+                <p>En línea · responde en segundos</p>
+            </div>
+        </div>
+        
+        <div class="chat-box">
+            <div class="message user-message">
+                <p>Tengo una pérdida en el caño bajo la bacha de la cocina, gotea bastante.</p>
+            </div>
+
+            <div class="message bot-message">
+                <div class="bot-avatar">IA</div>
+                <div class="message-content">
+                    <p>Hola. Para darte un diagnóstico más preciso, ¿el goteo viene de la rosca del sifón de plástico o directamente de la pared?</p>
+                </div>
+            </div>
+
+            <div class="message user-message">
+                <p>Viene del plástico blanco abajo de la bacha.</p>
+            </div>
+
+            <div class="message bot-message">
+                <div class="bot-avatar">IA</div>
+                <div class="message-content">
+                    <p><strong>Diagnóstico preliminar:</strong> Entendido. Necesitás un servicio de Plomería Básica (Talle S). Requiere cambio de sifón o sellado de juntas.</p>
+                    <div class="estimate-box">
+                        <span>Mano de obra estimada:</span>
+                        <strong>$30.000 - $50.000</strong>
+                    </div>
+                    <p>¿Querés que te muestre los técnicos verificados disponibles para solucionar esto hoy?</p>
+                    <a href="tecnicos.html" class="btn-primary btn-chat">Ver Técnicos Disponibles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" placeholder="Escribí un mensaje o adjuntá foto..." class="urgency-input chat-input">
+            <button class="btn-primary btn-send" onclick="alert('En el MVP esto procesaría la repregunta.')">Enviar</button>
+        </div>
+    </main>
+</body>
+</html>

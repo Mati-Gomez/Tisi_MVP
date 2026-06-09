@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Imprevisto | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+        <div class="nav-actions">
+            <a href="checkout.html" class="link-login">← Volver al servicio</a>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <p class="breadcrumb">Servicio activo › Reportar imprevisto</p>
+
+        <div class="auth-box">
+
+            <!-- Header con contexto del servicio activo -->
+            <div class="imprevisto-service-header">
+                <div class="tech-avatar" style="width:40px;height:40px;font-size:0.9rem;flex-shrink:0;">KM</div>
+                <div>
+                    <p style="font-weight:600;font-size:0.95rem;">Kevin Maidana · Plomería Básica</p>
+                    <p class="text-muted" style="font-size:0.8rem;">Presupuesto base aprobado: $30.000</p>
+                </div>
+            </div>
+
+            <div class="imprevisto-alert-box">
+                <strong>⚠️ Detectaste algo fuera del alcance original</strong>
+                <p>Describí el imprevisto y subí una foto de evidencia. La IA va a analizar la falla, validar el recargo y enviarle una solicitud de aprobación al cliente antes de continuar. No necesitás negociar cara a cara.</p>
+            </div>
+
+            <div class="input-group" style="margin-top:1.5rem;">
+                <label>Descripción del imprevisto</label>
+                <textarea 
+                    class="urgency-input full-width" 
+                    style="min-height:90px;resize:vertical;border:1.5px solid var(--color-border);border-radius:var(--radius-sm);padding:0.75rem 1rem;font-family:var(--font-body);font-size:0.9rem;"
+                    placeholder="Ej: Encontré la cañería de plomo original del edificio. Requiere reemplazo de 1,5m adicional..."
+                    id="descripcion"
+                ></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Foto de evidencia (obligatorio)</label>
+                <div class="file-upload-box" onclick="document.getElementById('foto').click()">
+                    <span class="file-upload-icon">📷</span>
+                    <span class="file-upload-label">Tocá para subir una foto</span>
+                    <span class="file-upload-hint">JPG o PNG · Máx. 10 MB</span>
+                    <input type="file" id="foto" accept="image/*" style="display:none">
+                </div>
+            </div>
+
+            <!-- Simulación del análisis IA -->
+            <div class="ia-analysis-box" id="ia-result" style="display:none;">
+                <div class="ia-analysis-header">
+                    <span class="ia-badge">IA</span>
+                    <strong>Análisis completado</strong>
+                </div>
+                <p class="ia-analysis-text">La evidencia fotográfica confirma la presencia de cañería de plomo deteriorada. El recargo estimado para el reemplazo de 1,5m es consistente con los parámetros del mercado.</p>
+                <div class="ia-recargo-line">
+                    <span>Recargo validado por IA</span>
+                    <strong class="recargo-amount">+ $15.000</strong>
+                </div>
+                <div class="ia-recargo-line ia-total-line">
+                    <span>Nuevo total a liberar</span>
+                    <strong>$45.000</strong>
+                </div>
+            </div>
+
+            <button 
+                class="btn-primary btn-full" 
+                id="btn-analizar"
+                onclick="simularAnalisisIA()"
+                style="margin-top:1rem;"
+            >
+                Enviar a análisis de IA
+            </button>
+
+            <button 
+                class="btn-primary btn-full btn-enviar-cliente" 
+                id="btn-enviar"
+                onclick="window.location.href='aprobacion-extra.html'"
+                style="display:none;margin-top:0.75rem;"
+            >
+                Enviar solicitud al cliente →
+            </button>
+
+        </div>
+
+        <div class="auth-context-panel">
+            <div>
+                <h3>¿Cómo funciona el reporte de imprevisto?</h3>
+                <p class="context-subtitle">Sin negociaciones incómodas cara a cara. Todo se resuelve dentro de la app con respaldo de IA.</p>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num">1</span>
+                <div class="context-step-text">
+                    <strong>Describís el imprevisto y subís foto</strong>
+                    <span>La evidencia visual es obligatoria para el análisis</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num">2</span>
+                <div class="context-step-text">
+                    <strong>La IA analiza y valida el recargo</strong>
+                    <span>Contrasta la evidencia con parámetros del mercado</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num">3</span>
+                <div class="context-step-text">
+                    <strong>El cliente aprueba desde su celular</strong>
+                    <span>Recibe una alerta con el detalle antes de que continúes</span>
+                </div>
+            </div>
+            <div class="context-security-note">
+                <strong>💡 Sin discusiones de precio</strong>
+                Si el cliente rechaza el imprevisto, el trabajo se cierra con el presupuesto original. Cobrás lo acordado igual.
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function simularAnalisisIA() {
+            const btn = document.getElementById('btn-analizar');
+            btn.textContent = 'Analizando evidencia…';
+            btn.style.opacity = '0.6';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('ia-result').style.display = 'block';
+                btn.style.display = 'none';
+                document.getElementById('btn-enviar').style.display = 'block';
+                document.getElementById('ia-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

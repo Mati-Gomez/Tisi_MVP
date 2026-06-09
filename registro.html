@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Identidad | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+        <div class="nav-actions">
+            <a href="tecnicos.html" class="link-login">Volver atrás</a>
+        </div>
+    </nav>
+
+    <main class="auth-container">
+        <p class="breadcrumb">Inicio › Diagnóstico › Verificación de identidad</p>
+        
+        <div class="auth-box">
+            <h2>Último paso antes de coordinar</h2>
+            <p class="auth-subtitle">Para proteger a ambas partes, nuestros técnicos verificados solo asisten a domicilios de usuarios validados.</p>
+            
+            <form class="auth-form" onsubmit="event.preventDefault(); window.location.href='checkout.html';">
+                <div class="input-group">
+                    <label>Nombre y Apellido</label>
+                    <input type="text" placeholder="Ej: Valentín Silva">
+                </div>
+                <div class="input-group">
+                    <label>DNI</label>
+                    <input type="number" placeholder="Sin puntos">
+                </div>
+                <div class="input-group file-upload">
+                    <label>Subir foto del DNI (Frente)</label>
+                    <input type="file">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Validar y Continuar</button>
+            </form>
+        </div>
+
+        <div class="auth-context-panel">
+            <div>
+                <h3>¿Por qué pedimos tu DNI?</h3>
+                <p class="context-subtitle">La verificación mutua es la base de la confianza. Tu técnico también fue validado antes de aparecer en la plataforma.</p>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num done">✓</span>
+                <div class="context-step-text">
+                    <strong>Diagnóstico completado</strong>
+                    <span>Plomería básica · $30.000 – $50.000 estimado</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num done">✓</span>
+                <div class="context-step-text">
+                    <strong>Técnico seleccionado</strong>
+                    <span>Kevin Maidana · Identidad verificada · ★ 4.8</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num">3</span>
+                <div class="context-step-text">
+                    <strong>Validación de identidad</strong>
+                    <span>Este paso tarda menos de 1 minuto</span>
+                </div>
+            </div>
+            <div class="context-step" style="opacity:0.45;">
+                <span class="context-step-num">4</span>
+                <div class="context-step-text">
+                    <strong>Turno y pago</strong>
+                    <span>Elegís el horario y pre-autorizás el monto</span>
+                </div>
+            </div>
+            <div class="context-security-note">
+                <strong>🔒 Tus datos están protegidos</strong>
+                Tu DNI solo se usa para verificar identidad. Nunca se comparte con el técnico ni con terceros.
+            </div>
+        </div>
+    </main>
+</body>
+</html>

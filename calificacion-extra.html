@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificar Servicio | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+    </nav>
+
+    <main class="review-container">
+        <div class="review-box">
+            <div class="tech-avatar large-avatar">KM</div>
+            <h2>¿Cómo te fue con Kevin?</h2>
+            <p class="text-muted">El servicio de Plomería Básica fue marcado como finalizado.</p>
+
+            <!-- Desglose de monto con adenda -->
+            <div class="monto-final-box">
+                <div class="monto-line">
+                    <span>Presupuesto base</span>
+                    <strong>$30.000</strong>
+                </div>
+                <div class="monto-line monto-adenda">
+                    <span>Imprevisto aprobado ✓</span>
+                    <strong class="recargo-amount">+ $15.000</strong>
+                </div>
+                <div class="monto-line monto-total">
+                    <span>Total a liberar</span>
+                    <strong>$45.000</strong>
+                </div>
+            </div>
+
+            <div class="star-rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+
+            <textarea 
+                class="urgency-input full-width review-text" 
+                placeholder="Dejá un comentario sobre el trabajo de Kevin. Esto ayuda a otros usuarios y mejora su reputación."
+            ></textarea>
+
+            <button class="btn-primary btn-full" onclick="window.location.href='index.html'">Liberar fondos y calificar</button>
+
+            <a href="#" class="report-issue">Hubo un problema con el arreglo (Abrir disputa)</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma tu Oficio | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+        <div class="nav-actions">
+            <a href="index.html" class="link-login">Soy Usuario (Pedir Asistencia)</a>
+        </div>
+    </nav>
+
+    <main class="tech-landing-container">
+        <div class="tech-hero">
+            <h1 class="hero-title">Trabajá seguro. Cobrá siempre.</h1>
+            <p class="hero-subtitle">La plataforma que filtra falsas urgencias y te garantiza el pago de tu mano de obra mediante retención digital.</p>
+        </div>
+
+        <div class="tech-features">
+            <div class="feature-card">
+                <h3>🛡️ Cobro Garantizado</h3>
+                <p>El cliente paga por adelantado. El dinero se retiene seguro y se te libera a las 48hs de terminar el trabajo sin regateos.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚫 Fin a las visitas falsas</h3>
+                <p>Nadie te hace viajar gratis. Si el cliente te hace ir y cancela, cobrás automáticamente la tasa de visita.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⭐ Reputación Real</h3>
+                <p>Construí tu perfil. Tus reseñas verificadas te van a posicionar primero para los próximos trabajos en tu zona.</p>
+            </div>
+        </div>
+
+        <div class="auth-box tech-onboarding-box">
+            <h2>Creá tu perfil técnico</h2>
+            <p class="auth-subtitle">Validamos la identidad de todos los profesionales para garantizar la seguridad de la comunidad.</p>
+            
+            <form class="auth-form" onsubmit="event.preventDefault(); alert('Documentación enviada. Tu perfil está en revisión (Demora est. 24hs).'); window.location.href='index.html';">
+                <div class="input-group">
+                    <label>Nombre y Apellido</label>
+                    <input type="text" placeholder="Ej: Kevin Maidana">
+                </div>
+                <div class="input-group">
+                    <label>Rubro Principal</label>
+                    <select class="urgency-input">
+                        <option>Plomería</option>
+                        <option>Electricidad (Requiere Matrícula)</option>
+                        <option>Gas (Requiere Matrícula)</option>
+                    </select>
+                </div>
+                <div class="input-group file-upload">
+                    <label>Foto DNI (Frente)</label>
+                    <input type="file">
+                </div>
+                <div class="input-group file-upload">
+                    <label>Comprobante de Matrícula (Opcional)</label>
+                    <input type="file">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Enviar perfil a revisión</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

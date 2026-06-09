@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobar Imprevisto | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+    </nav>
+
+    <main class="auth-container">
+        <p class="breadcrumb">Servicio en curso › Validación de imprevisto</p>
+
+        <div class="auth-box">
+
+            <!-- Alerta de urgencia -->
+            <div class="aprobacion-urgencia-banner">
+                <span>🔔</span>
+                <span>Kevin está esperando tu respuesta para continuar el trabajo</span>
+            </div>
+
+            <h2 style="margin-top:1.25rem;">Se detectó un imprevisto</h2>
+            <p class="auth-subtitle">Kevin encontró una falla adicional no contemplada en el diagnóstico original. La IA analizó la evidencia y validó el recargo. Revisá los detalles antes de decidir.</p>
+
+            <!-- Foto de evidencia simulada -->
+            <div class="evidencia-foto">
+                <div class="evidencia-foto-placeholder">
+                    <span style="font-size:2rem;">🔧</span>
+                    <span style="font-size:0.8rem;color:var(--color-text-muted);margin-top:0.5rem;">Foto enviada por Kevin</span>
+                    <span style="font-size:0.75rem;color:var(--color-text-muted);">Cañería de plomo deteriorada · Sección bajo bacha</span>
+                </div>
+            </div>
+
+            <!-- Descripción del técnico -->
+            <div class="imprevisto-descripcion-box">
+                <p style="font-size:0.8rem;font-weight:600;color:var(--color-text-muted);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.05em;">Descripción del técnico</p>
+                <p style="font-size:0.9rem;line-height:1.6;">"Encontré la cañería de plomo original del edificio. Requiere reemplazo de 1,5m adicional que no estaba contemplado en el diagnóstico inicial."</p>
+            </div>
+
+            <!-- Validación IA -->
+            <div class="ia-analysis-box">
+                <div class="ia-analysis-header">
+                    <span class="ia-badge">IA</span>
+                    <strong>Recargo validado por IA</strong>
+                </div>
+                <p class="ia-analysis-text">La evidencia fotográfica es consistente con la descripción. El monto adicional es acorde a los parámetros del mercado para este tipo de reparación.</p>
+            </div>
+
+            <!-- Resumen financiero -->
+            <div class="aprobacion-resumen">
+                <div class="aprobacion-line">
+                    <span>Presupuesto original aprobado</span>
+                    <strong>$30.000</strong>
+                </div>
+                <div class="aprobacion-line recargo-line">
+                    <span>Recargo validado por IA</span>
+                    <strong class="recargo-amount">+ $15.000</strong>
+                </div>
+                <div class="aprobacion-line aprobacion-total">
+                    <span>Nuevo total en garantía</span>
+                    <strong>$45.000</strong>
+                </div>
+            </div>
+
+            <div class="aprobacion-botones">
+                <button 
+                    class="btn-primary btn-full btn-aprobar"
+                    onclick="window.location.href='calificacion-extra.html'"
+                >
+                    ✓ Aprobar y continuar ($45.000)
+                </button>
+                <button 
+                    class="btn-rechazar btn-full"
+                    onclick="window.location.href='calificacion.html'"
+                >
+                    Rechazar imprevisto
+                </button>
+            </div>
+
+            <p class="aprobacion-nota">Si rechazás, el trabajo se cierra con el presupuesto original de $30.000 y el técnico no continuará con la reparación adicional.</p>
+
+        </div>
+
+        <div class="auth-context-panel">
+            <div>
+                <h3>El técnico encontró algo más</h3>
+                <p class="context-subtitle">Kevin no puede continuar el trabajo sin tu autorización. Revisá la evidencia antes de decidir.</p>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num done">✓</span>
+                <div class="context-step-text">
+                    <strong>Diagnóstico original completado</strong>
+                    <span>Plomería básica · $30.000 aprobado</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num done">✓</span>
+                <div class="context-step-text">
+                    <strong>Imprevisto reportado por Kevin</strong>
+                    <span>Cañería de plomo deteriorada detectada en obra</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num done">✓</span>
+                <div class="context-step-text">
+                    <strong>Recargo validado por IA</strong>
+                    <span>+ $15.000 · Consistente con parámetros del mercado</span>
+                </div>
+            </div>
+            <div class="context-step">
+                <span class="context-step-num">4</span>
+                <div class="context-step-text">
+                    <strong>Tu decisión</strong>
+                    <span>Aprobás o rechazás antes de que Kevin continúe</span>
+                </div>
+            </div>
+            <div class="context-security-note">
+                <strong>🔒 Tu dinero sigue protegido</strong>
+                Si aprobás, solo se retiene el monto adicional. Si rechazás, Kevin cierra el trabajo con los $30.000 originales.
+            </div>
+        </div>
+    </main>
+</body>
+</html>

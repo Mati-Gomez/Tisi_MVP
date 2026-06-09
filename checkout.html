@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinar Visita | AppName</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-logo">AppName</div>
+    </nav>
+
+    <main class="checkout-container">
+        <p class="breadcrumb">Inicio › Diagnóstico › Técnicos › Turno y pago</p>
+        
+        <div class="checkout-grid">
+            <div class="checkout-section">
+                <h2>1. ¿Cuándo necesitás la visita?</h2>
+                <p class="text-muted">Seleccioná una ventana horaria para Kevin Maidana.</p>
+                <div class="time-windows">
+                    <div class="time-slot active">
+                        <strong>Hoy</strong>
+                        <span>14:00 - 16:00</span>
+                    </div>
+                    <div class="time-slot">
+                        <strong>Hoy</strong>
+                        <span>16:00 - 18:00</span>
+                    </div>
+                    <div class="time-slot">
+                        <strong>Mañana</strong>
+                        <span>09:00 - 11:00</span>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 2rem;">2. Dirección del incidente</h2>
+                <input type="text" class="urgency-input full-width" value="Calle 4 N° 1234, Depto 2A, La Plata">
+            </div>
+
+            <div class="checkout-sidebar">
+                <h3>Resumen de Pago</h3>
+                <div class="summary-line">
+                    <span>Tasa de visita (Se cobra ahora)</span>
+                    <strong>$5.000</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Mano de obra est. (Retenido 48hs)</span>
+                    <strong>$30.000</strong>
+                </div>
+                <hr>
+                <div class="summary-line total">
+                    <span>Total a autorizar</span>
+                    <strong>$35.000</strong>
+                </div>
+                
+                <div class="security-box">
+                    <strong>🔒 Tu dinero está protegido</strong>
+                    <p style="margin-top: 0.5rem;">Solo se cobrarán los $5.000 de la visita. Los $30.000 restantes quedan congelados. Solo se liberan a Kevin si no reportás problemas 48hs después del arreglo.</p>
+                </div>
+
+                <button class="btn-primary btn-full" onclick="window.location.href='calificacion.html'">Pagar y Confirmar Turno</button>
+
+                <a href="imprevisto.html" class="btn-imprevisto-link">⚠️ Surgió un imprevisto en el arreglo</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
